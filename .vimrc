@@ -4,6 +4,11 @@ set background=dark
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"add path search 
+set path+=**
+set wildmenu
+
+
 
 "set tab
 :set tabstop=4
@@ -28,6 +33,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'keflavich/macvim-skim'
+Plugin 'powerline/powerline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
