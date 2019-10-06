@@ -18,7 +18,8 @@
   :ensure t
   :config (which-key-mode))
 
-
+;; turn off c-macros for openmp indent
+(c-set-offset (quote cpp-macro) 0 nil)
 ;;org-mode
 (use-package org-bullets
   :ensure t
@@ -31,7 +32,7 @@
 
 
 ;;my color scheme
-(load-theme 'zenburn t)
+(load-theme 'solarized-light t)
 
 
 ;;add color to member method
@@ -63,6 +64,27 @@
   (setq auctex-latexmk-inherit-TeX-PDF-mode t))
 
 
+(use-package pdf-tools
+  :ensure t
+  :config
+  (pdf-tools-install)
+  )
+
+;; Use pdf-tools to open PDF files
+(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+      TeX-source-correlate-start-server t)
+
+;; Update PDF buffers after successful LaTeX runs
+(add-hook 'TeX-after-compilation-finished-functions
+           #'TeX-revert-document-buffer)
+
+
+
+
+
+
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -71,7 +93,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit auctex-latexmk auctex zenburn-theme zenburn solarized-theme evil))))
+    (go-mode magit auctex-latexmk auctex zenburn-theme zenburn solarized-theme evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,5 +1,5 @@
 syntax enable
-set background=dark
+set background=light
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -15,6 +15,8 @@ set wildmenu
 :set shiftwidth=4
 :set expandtab
 
+" turn off c-macro # for openmp
+:set cinkeys-=0#
 
 
 " set the runtime path to include Vundle and initialize
@@ -27,11 +29,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-
+Plugin 'micha/vim-colors-solarized'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'keflavich/macvim-skim'
 Plugin 'powerline/powerline'
 " All of your Plugins must be added before the following line
