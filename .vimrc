@@ -1,5 +1,5 @@
 syntax enable
-set background=light
+set background=dark
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -28,7 +28,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
+Plugin 'Zenburn'
 Plugin 'micha/vim-colors-solarized'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/syntastic'
