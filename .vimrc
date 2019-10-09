@@ -1,5 +1,6 @@
 syntax enable
-set background=dark
+set background=light
+colorscheme solarized
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
